@@ -4,6 +4,7 @@
   console.log('Ready');
   var wordArray = [];
   var wordObj = {};
+  var sortedObj = {};
 // create DIV element to target and push wordCloud
   let div = document.createElement('div');
   div.style.cssText = 'position: absolute; width: 100%; height: 100%;'
@@ -14,6 +15,7 @@
     wordArray.push(x.innerText.split(" "));
   });
 
+  // Should ideally handle key alphabetize sorting in wordArray.forEach (refactoring)
   wordArray.forEach(x => {
     for(var i = 0; i < x.length; i++){
       var num = x[i];
@@ -24,14 +26,22 @@
       }
     }
   })
-  // Create text element for each wordObj K
-  // Multiply style attribute font-size by value * 10;
-  for (var i in wordObj){
-    if(wordObj.hasOwnProperty(i)){
+  Object.keys(wordObj).sort().forEach(function(key){
+    sortedObj[key] = wordObj[key];
+  })
+
+  // TODO
+  // set font-size larger depending on appeared value
+  // ensure word length check is working properly
+  // refactor
+
+  for (var i in sortedObj){
+    if(sortedObj.hasOwnProperty(i)){
       let createdEle = document.createElement('p');
-      let appeared = wordObj[i];
+      let appeared = sortedObj[i];
       createdEle.innerHTML = i;
-      createdEle.style.cssText = 'width: 100%;color: black; margin: 10px; size: ' + appeared * 10 + ';';
+      createdEle.style.cssText = 'width: 100%;color: black; margin: 10px;';
+      createdEle.style.fontSize = appeared * 10;
       div.appendChild(createdEle);
     }
   }
