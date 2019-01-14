@@ -1,7 +1,7 @@
 # INSTRUCTIONS
 * Running localhost server on port:8000 w/ Python -m 'SimpleHTTPServer'
-* Bookmarklet renders on localhost as <a> and dragged into bookmarks bar
-* Navigated to https://themeisle.com/blog/best-free-blogging-sites/ and clicked bookmark
+* Navigate to http://localhost:8000/ and drag Word Count Visualizer link to Bookmarks bar
+* Navigate to https://themeisle.com/blog/best-free-blogging-sites/ and click Word Count Visualizer
 
 # Assumptions:
 * Website to analyze - https://themeisle.com/blog/best-free-blogging-sites/
