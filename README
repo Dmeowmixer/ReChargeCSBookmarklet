@@ -1,0 +1,5 @@
+Assumptions: 
+
+* Website to analyze - Reddit
+* Words are separated by Spaces (currently targeting <p> tags)
+* Browser - Chrome 71, 1920x1080 24bit, JS Enabled
