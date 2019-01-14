@@ -32,6 +32,7 @@
 
   // TODO
   // set font-size larger depending on appeared value
+  // !! IF font-size will not work, if statement and using h1 h2 h3 etc depending on appeared var as temporary fix
   // ensure word length check is working properly
   // refactor
 
