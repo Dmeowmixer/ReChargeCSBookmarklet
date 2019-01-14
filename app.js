@@ -7,6 +7,8 @@
   var sortedObj = {};
 // create DIV element to target and push wordCloud
   let div = document.createElement('div');
+  div.id = 'sitePenResultsDiv';
+
   div.style.cssText = 'position: absolute; width: 100%; height: 100%;'
   document.body.appendChild(div);
 
@@ -31,18 +33,26 @@
   })
 
   // TODO
-  // set font-size larger depending on appeared value
-  // !! IF font-size will not work, if statement and using h1 h2 h3 etc depending on appeared var as temporary fix
   // ensure word length check is working properly
   // refactor
 
   for (var i in sortedObj){
     if(sortedObj.hasOwnProperty(i)){
-      let createdEle = document.createElement('p');
       let appeared = sortedObj[i];
+      var createdEle;
+      if (appeared >= 6){
+        createdEle = document.createElement('h1');
+      } else if (appeared >= 4){
+        createdEle = document.createElement('h2');
+      } else if (appeared >= 2 ){
+        createdEle = document.createElement('h3');
+      } else{
+        createdEle = document.createElement('h4');
+      }
+
       createdEle.innerHTML = i;
-      createdEle.style.cssText = 'width: 100%;color: black; margin: 10px;';
-      createdEle.style.fontSize = appeared * 10;
+      createdEle.style.cssText = 'width: 100%;color: black; margin: 10px; font-size: "";';
+      
       div.appendChild(createdEle);
     }
   }
