@@ -4,7 +4,7 @@
 * Navigate to https://themeisle.com/blog/best-free-blogging-sites/ and click Word Count Visualizer
 
 # Assumptions:
-* Website to analyze - https://themeisle.com/blog/best-free-blogging-sites/
+* Website analyzed - https://themeisle.com/blog/best-free-blogging-sites/
 * Words are separated by Spaces (currently targeting p tags), however, additional tags can be targeted and added to the wordArray before processing.
 * Browser - Chrome 71, JS Enabled
 
